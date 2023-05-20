@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <style>
+        .cabecera {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        .cabecera img {
+            width: 10%;
+        }
+
+        .menu {
+            background-color: lightcoral;
+            padding: 5px 10px;
+            margin: 0;
+            display: flex;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .menu ul li {
+            display: inline-flex;
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        
+        .contenido {
+            overflow: auto;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
+            max-width: 80%;
+        }
+
+        .imagen {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid grey;
+            margin: 10px;
+            max-width: 100px;
+        }
+
+        .imagen img {
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+
+        .imagen h2 {
+            text-align: center;
+        }
+
+        aside {
+            float: right;
+            background-color: grey;
+            width: 20%;
+        }
+
+        footer {
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <img src="https://seeklogo.com/images/L/lion-leao-logo-47267D166B-seeklogo.com.png">
+            <h1> Zooweb </h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Animales</a></li>
+                <li><a href="#">Localizaciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenido">
+        <div class="galeria">
+
+            <div class="imagen">
+                <img src="https://www.hogarmania.com/archivos/202207/tucan-1280x720x80xX.jpg">
+                <h2>Tucán</h2>
+            </div>
+
+            <div class="imagen">
+                <img
+                    src="https://static.wikia.nocookie.net/reinoanimalia/images/b/b5/León_wiki2.png/revision/latest?cb=20130303082204&path-prefix=es">
+                <h2>León</h2>
+            </div>
+
+            <div class="imagen">
+                <img
+                    src="https://www.nationalgeographic.com.es/medio/2022/12/15/el-tigre-se-considera-el-mas-grande-de-los-grandes-felinos-lastima-que-no-sea-un-felino_52cfdb50_221215190247_1280x897.jpg">
+                <h2>Tigre</h2>
+            </div>
+
+            <div class="imagen">
+                <img
+                    src="https://imagenes.muyinteresante.es/files/composte_image/files/fp/uploads/2023/02/16/63ee1fe8114ce.r_d.1024-768-3174.jpeg">
+                <h2>Jirafa</h2>
+            </div>
+
+            <div class="imagen">
+                <img
+                    src="https://www.ngenespanol.com/wp-content/uploads/2023/01/koala-el-marsupial-que-mantiene-la-salud-de-los-bosques-australianos.jpg">
+                <h2>Koala</h2>
+            </div>
+
+            <div class="imagen">
+                <img src="https://exoticsveterinaria.com/wp-content/uploads/2020/12/rana_exotics_3.jpg">
+                <h2>Rana</h2>
+            </div>
+
+            <div class="imagen">
+                <img src="https://cdn.pixabay.com/photo/2016/10/04/23/52/cow-1715829_1280.jpg">
+                <h2>Vaca</h2>
+            </div>
+
+            <div class="imagen">
+                <img src="https://media.revistagq.com/photos/5ca5f9bcf552a1bd0032ecd0/master/pass/llama_9547.jpg">
+                <h2>Llama</h2>
+            </div>
+        </div>
+
+        <aside>
+            <ol>
+                <li>África</li>
+                <li>América</li>
+                <li>Asia</li>
+                <li>Europa</li>
+                <li>Oceanía</li>
+            </ol>
+        </aside>
+    </section>
+
+    <footer>
+        <p> (C) Tecnoweb </p>
+    </footer>
+
+</body>
+
+</html>

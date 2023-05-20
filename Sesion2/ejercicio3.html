@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <style>
+
+        /* Con el formato especificado, aparece un espacio entre los contenedor primero medio y siguiente. Por eso, quitamos el display: inline-block y ponemos float.*/
+
+        /* Bloque nav y p con borde de 5px diferentes colores */
+        /* Bloque nav centrado en la página y ancho del 80% */
+        nav {
+            border: 5px solid black;
+            margin: auto;
+            width: 80%;
+            height: 50px;
+        }
+
+        .primero {
+            /*display: inline-block;*/
+            /* Los tres p alineados en una misma linea */
+            float: left;
+            border: 5px solid red;
+            width: calc(20% - 35px);
+            /* Párrafos primero y final ancho del 20% de su contenedor */
+            text-align: left;
+        }
+
+        .primero::before {
+            content: "\00ab";
+        }
+
+        .medio {
+            /*display: inline-block;*/
+            /* Los tres p alineados en una misma linea */
+            float: left;
+            border: 5px solid green;
+            width: calc(60% - 30px);
+            /* Párrafo medio ancho del 60% del contenedor */
+            text-align: center;
+        }
+
+        .final {
+            /*display: inline-block;*/
+            /* Los tres p alineados en una misma linea */
+            float: left;
+            border: 5px solid blue;
+            width: calc(20% - 35px);
+            /* Párrafos primero y final ancho del 20% de su contenedor */
+            text-align: right;
+        }
+
+        .final::after {
+            content: "\00bb"
+        }
+
+        p {
+            margin: 0%;
+        }
+
+        nav,
+        p {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p class="primero">Anterior</p>
+        <p class="medio">Medio</p>
+        <p class="final">Siguiente</p>
+    </nav>
+</body>
+
+</html>

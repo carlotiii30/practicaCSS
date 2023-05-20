@@ -1,0 +1,11 @@
+.fila3 {
+    margin: 10px;
+    text-align: center;
+}
+
+.fila3 .imagen {
+    width: calc(30% - 2px);
+    margin: 1px;
+    text-align: end;
+    display: inline-block;
+}

@@ -1,0 +1,25 @@
+.fila {
+    margin: 10px;
+    text-align: center;
+}
+
+.col1 .imagen {
+    display: inline-block;
+    width: calc(100% - 12px);
+    margin: 1px;
+    text-align: end;
+} 
+
+.col2 .imagen {
+    display: inline-block;
+    width: calc(50% - 22px);
+    margin: 1px;
+    text-align: end;
+}
+
+.col3 .imagen {
+    width: calc(30% - 2px);
+    margin: 1px;
+    text-align: end;
+    display: inline-block;
+}

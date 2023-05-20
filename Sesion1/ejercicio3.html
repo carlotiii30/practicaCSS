@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+
+    <style>
+        #ftecnica {
+            /* Especificidad: 1 0 0*/
+            color: gold;
+        }
+
+        section {
+            /* Especificidad: 0 0 1 */
+            color: green;
+        }
+
+        li>span:not(:first-child) {
+            /* Especificidad: 0 1 2*/
+            color: aqua;
+        }
+
+        span:nth-child(2) {
+            /* Especificidad: 0 1 1*/
+            color: red;
+        }
+
+        li span {
+            /* Especificidad: 0 0 2*/
+            color: blue;
+        }
+
+        .enfasis {
+            /* Especificidad: 0 1 0*/
+            color: pink;
+        }
+
+        span < li:not(:nth-last-child) {
+            /* Especificidad: Está mal -- 0 */
+            color: yellow;
+        }
+
+        li:nth-child(2n) {
+            /* Especificidad: 0 1 1*/
+            color: salmon;
+        }
+
+        #bryan {
+            /* Especificidad: 1 0 0*/
+            color: gray;
+        }
+
+        section>ul>li.main {
+            /* Especificidad: 0 1 3*/
+            color: royalblue;
+        }
+
+        #ftecnica h2 {
+            /* Especificidad: 1 0 1*/
+            color: plum;
+        }
+
+        section h2 {
+            /* Especificidad: 0 0 2*/
+            color: skyblue;
+        }
+
+        section#ftecnica li li:last-child {
+            /* Especificidad: 1 1 3*/
+            color: sienna;
+        }
+
+        #betsy {
+            /* Especificidad: 1 0 0*/
+            color: darkblue;
+        }
+
+        main>section>section>ul>li:last-child {
+            /* Especificidad: 0 1 5*/
+            color: silver;
+        }
+    </style>
+</head>
+
+<body> <!- No le afecta ninguna regla->
+    <header>
+        <h1>Breaking Bad</h1> <!- No le afecta ninguna regla. COLOR: Negro->
+        <h2>Serie de televisión</h2> <!- No le afecta ninguna regla. COLOR: Negro->
+    </header>
+    <main>
+        <section> <!-Regla nº 2. COLOR: Verde->
+            <h2>Argumento:</h2> <!-Regla nº2 y 12. COLOR: Azul cielo->
+            <p>Walter White (Bryan Cranston) es un frustrado
+                profesor de química en un instituto, padre de un joven
+                discapacitado y con una mujer (Anna Gunn) embarazada.</p> <!-Regla nº 2. COLOR: Verde->
+        </section>
+        <section id="ftecnica"> <!-Regla nº 1. COLOR: Dorado->
+            <h2>Ficha técnica:</h2> <!-Regla nº 1 y 11. COLOR: Ciruela->
+            <ul>
+                <li>Año:  <!-Regla nº 1. COLOR: Dorado->
+                    <span class="enfasis">2008</span> <!-Regla nº 1, 5 y 6. COLOR: Rosa-> 
+                </li>
+                <li>País:  <!-Regla nº 1 y 8 . COLOR: Salmon->
+                    <span>EEUU</span>  <!-Regla nº 1 y 5. COLOR: Azul-> 
+                </li>
+                <li>Idiomas:  <!-Regla nº 1. COLOR: Dorado->
+                    <span>Inglés</span>  <!-Regla nº 1 y 5. COLOR: Azul-> 
+                    , <!-Regla nº 1. COLOR: Dorado->
+                    <span>Español</span>  <!-Regla nº 1, 3 y 5. COLOR: Agua-> 
+                </li>
+                <li>
+                    <span>Productores ejecutivos:</span> <!-Regla nº 1 y 5. COLOR: Azul-> 
+                    <ul>
+                        <li>Vince Gilligan</li>
+                        <li>Mark Johnson</li> <!-Regla nº 1 y 8. COLOR: Salmon->
+                        <li>Michelle MacLaren</li> <!-Regla nº 1 y 13. COLOR: Siena->
+                    </ul>
+                </li>
+            </ul>
+            <section>
+                <h2>Protagonistas:</h2> <!-Regla nº 1 y 11. COLOR: Ciruela->
+                <ul>
+                    <li id="bryan" class="main">Bryan Cranston</li> <!-Regla nº 1, 9 y 10. COLOR: Gris->
+                    <li>Aaron Paul</li> <!- Regla nº 1 y 8 . COLOR: Salmon->
+                    <li>Anna Gunn</li> <!-Regla nº 1 y 2. COLOR: Verde->
+                    <li>Dean Norris</li>
+                    <li id="betsy">Betsy Brandt</li> <!-Regla nº 1, 14 y 15. COLOR: Azul oscuro->
+                </ul>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Datos obtenidos de <!- No le afecta ninguna regla. COLOR: Negro->
+            <span class="enfasis">Wikipedia</span> <!-Regla nº 6. COLOR: Rosa-> 
+            y otros sitios <!- No le afecta ninguna regla. COLOR: Negro->
+        </p>
+    </footer>
+</body>
+
+</html>
